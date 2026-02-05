@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<style>
+    body {
+        background-color: #f4f6f9;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #1f2937;
+    }
+
+    .home-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .home-card {
+        background: #ffffff;
+        max-width: 520px;
+        width: 100%;
+        padding: 40px;
+        border-radius: 6px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        text-align: center;
+        animation: fadeIn 0.4s ease;
+    }
+
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .home-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .home-subtitle {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+    .home-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    .btn-secondary {
+        border: 1px solid #2563eb;
+        color: #2563eb;
+    }
+</style>
+
+<div class="home-wrapper">
+    <div class="home-card">
+        <div class="home-title">QR Code Attendance System</div>
+        <div class="home-subtitle">
+            Secure & Contactless Attendance Management
+        </div>
+
+        <a href="/Account/TeacherLogin" class="home-btn btn-primary">
+            Teacher Login
+        </a>
+
+        <a href="/Account/StudentLogin" class="home-btn btn-secondary">
+            Student Login
+        </a>
+    </div>
+</div>

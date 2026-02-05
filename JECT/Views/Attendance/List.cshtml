@@ -1,0 +1,20 @@
+﻿@model List<JECT.Models.Attendance>
+
+<h2>Attendance Records</h2>
+
+<table border="1">
+    <tr>
+        <th>Student ID</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentId</td>
+            <td>@item.Date</td>
+            <td>@(item.IsPresent ? "Present" : "Absent")</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Student Login";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        background-color: #f4f6f9;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #1f2937;
+    }
+
+    .login-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .login-card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 380px;
+        padding: 28px 24px;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        animation: fadeIn 0.4s ease;
+    }
+
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-title {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .login-subtitle {
+        font-size: 14px;
+        color: #6b7280;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px; /* prevents zoom on mobile */
+        border-radius: 6px;
+        border: 1px solid #d1d5db;
+        margin-bottom: 18px;
+        box-sizing: border-box;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #2563eb;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 14px;
+        background-color: #2563eb;
+        border: none;
+        color: #ffffff;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .btn-login:active {
+        background-color: #1e40af;
+    }
+</style>
+
+<div class="login-wrapper">
+    <div class="login-card">
+
+        <div class="login-title">Student Login</div>
+        <div class="login-subtitle">
+            Scan QR Code & Mark Attendance
+        </div>
+
+        <form method="post">
+            <input type="text"
+                   name="studentId"
+                   class="form-control"
+                   placeholder="Enter Student ID"
+                   required />
+
+            <button type="submit" class="btn-login">
+                Continue
+            </button>
+        </form>
+
+    </div>
+</div>

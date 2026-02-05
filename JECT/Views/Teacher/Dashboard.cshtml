@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Teacher Dashboard";
+}
+
+<style>
+    body {
+        background-color: #f4f6f9;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+    }
+
+    .dashboard-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .dashboard-title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: #111827;
+        text-align: center;
+    }
+
+    .card-row {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card-box {
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 25px 20px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        width: 260px;
+    }
+
+    .card-box h5 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #1f2937;
+    }
+
+    .card-box p {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 18px;
+    }
+
+    .status-text {
+        font-size: 18px;
+        font-weight: 600;
+        color: #16a34a;
+    }
+
+    .card-btn {
+        display: block;
+        padding: 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: background 0.2s ease;
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        color: #ffffff;
+    }
+
+    .btn-primary:hover {
+        background-color: #1d4ed8;
+        color: #ffffff;
+    }
+
+    .btn-danger {
+        background-color: #dc2626;
+        color: #ffffff;
+    }
+
+    .btn-danger:hover {
+        background-color: #b91c1c;
+        color: #ffffff;
+    }
+</style>
+
+<div class="dashboard-wrapper">
+
+    <div class="dashboard-title">
+        Teacher Dashboard
+    </div>
+
+    <div class="card-row">
+
+        <!-- QR CARD -->
+        <div class="card-box">
+            <h5>Generate QR Code</h5>
+            <p>Start today’s attendance session</p>
+            <a href="/QR/Index" class="card-btn btn-primary">
+                Open QR
+            </a>
+        </div>
+
+        <!-- STATUS CARD -->
+        <div class="card-box">
+            <h5>Attendance Status</h5>
+            <p>Live attendance collection</p>
+            <div class="status-text">Active</div>
+        </div>
+
+        <!-- LOGOUT CARD -->
+        <div class="card-box">
+            <h5>Logout</h5>
+            <p>End your session securely</p>
+            <a href="/Teacher/Logout" class="card-btn btn-danger">
+                Logout
+            </a>
+        </div>
+
+    </div>
+
+</div>

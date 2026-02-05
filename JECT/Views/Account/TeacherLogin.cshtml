@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Teacher Login";
+}
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #f4f6f9;
+        color: #1f2937;
+    }
+
+    .login-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .login-card {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 420px;
+        padding: 40px 36px;
+        border-radius: 6px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        animation: fadeIn 0.4s ease-in;
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .login-title {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 6px;
+        color: #111827;
+    }
+
+    .login-subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 14px;
+        border-radius: 4px;
+        border: 1px solid #d1d5db;
+        margin-bottom: 16px;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 12px;
+        background-color: #2563eb;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .btn-login:hover {
+        background-color: #1e4fd6;
+    }
+
+    .error-text {
+        margin-top: 16px;
+        font-size: 13px;
+        text-align: center;
+        color: #b91c1c;
+    }
+
+    .footer-text {
+        margin-top: 24px;
+        font-size: 12px;
+        text-align: center;
+        color: #9ca3af;
+    }
+</style>
+
+<div class="login-wrapper">
+    <div class="login-card">
+
+        <div class="login-title">Teacher Login</div>
+        <div class="login-subtitle">
+            QR Code Based Attendance Management System
+        </div>
+
+        <form method="post">
+            <input type="text"
+                   name="username"
+                   class="form-control"
+                   placeholder="Username"
+                   required />
+
+            <input type="password"
+                   name="password"
+                   class="form-control"
+                   placeholder="Password"
+                   required />
+
+            <button type="submit" class="btn-login">
+                Login
+            </button>
+        </form>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="error-text">@ViewBag.Error</div>
+        }
+
+        <div class="footer-text">
+            © 2026 • Authorized Faculty Access Only
+        </div>
+
+    </div>
+</div>

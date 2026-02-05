@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "QR Attendance";
+}
+
+<style>
+    .qr-wrapper {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .qr-card {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 6px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        max-width: 420px;
+        width: 100%;
+    }
+
+    .qr-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .qr-subtitle {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 25px;
+    }
+
+    .qr-image img {
+        width: 100%;
+        max-width: 260px;
+        border: 4px solid #1e3a8a;
+        padding: 10px;
+        border-radius: 6px;
+        background: #ffffff;
+    }
+
+    .qr-note {
+        font-size: 13px;
+        color: #374151;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="qr-wrapper">
+    <div class="qr-card">
+
+        <div class="qr-title">Scan to Mark Attendance</div>
+        <div class="qr-subtitle">
+            Students must scan using mobile browser
+        </div>
+
+        <div class="qr-image">
+            <img src="@ViewBag.QRCodeImage" alt="QR Code" />
+        </div>
+
+        <div class="qr-note">
+            Attendance valid for this session only
+        </div>
+
+    </div>
+</div>

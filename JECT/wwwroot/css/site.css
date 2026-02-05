@@ -1,0 +1,132 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+    /* animated background glow */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(circle at 20% 20%, rgba(0, 198, 255, 0.25), transparent 40%), radial-gradient(circle at 80% 80%, rgba(255, 0, 150, 0.25), transparent 40%);
+        animation: bgMove 12s infinite alternate;
+        z-index: -1;
+    }
+
+@keyframes bgMove {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* ===== CARD ===== */
+.auth-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== INPUT ===== */
+.form-control {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+    .form-control::placeholder {
+        color: #ccc;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 0 2px rgba(0,198,255,0.5);
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+    }
+
+/* ===== BUTTON ===== */
+.btn-primary-pro {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 600;
+    transition: transform .2s, box-shadow .2s;
+}
+
+    .btn-primary-pro:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0,114,255,0.5);
+    }
+
+/* ===== QR ===== */
+.qr-box img {
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .auth-card {
+        margin: 20px;
+        padding: 25px;
+    }
+}

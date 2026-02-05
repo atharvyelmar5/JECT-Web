@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Attendance Marked";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        background-color: #f4f6f9;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #1f2937;
+    }
+
+    .success-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .success-card {
+        background: #ffffff;
+        padding: 32px 24px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 380px;
+        border-top: 6px solid #16a34a;
+    }
+
+    .success-icon {
+        font-size: 52px;
+        color: #16a34a;
+        margin-bottom: 12px;
+    }
+
+    .success-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #065f46;
+        margin-bottom: 8px;
+    }
+
+    .success-text {
+        font-size: 14px;
+        color: #374151;
+        margin-bottom: 22px;
+        line-height: 1.5;
+    }
+
+    .btn-home {
+        width: 100%;
+        background-color: #1e3a8a;
+        color: #ffffff;
+        border-radius: 6px;
+        padding: 12px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .btn-home:active {
+        background-color: #1c3373;
+    }
+
+    .success-note {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 18px;
+    }
+</style>
+
+<div class="success-wrapper">
+    <div class="success-card">
+
+        <div class="success-icon">✔</div>
+
+        <div class="success-title">
+            Attendance Marked Successfully
+        </div>
+
+        <div class="success-text">
+            Your attendance has been recorded for today.<br />
+            You may now close this page.
+        </div>
+
+        <a href="/" class="btn-home">
+            Go to Home
+        </a>
+
+        <div class="success-note">
+            If this page is shown again, attendance will not be duplicated.
+        </div>
+
+    </div>
+</div>
